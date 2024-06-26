@@ -1,0 +1,189 @@
+digraph {
+	graph [size="16.05,16.05"]
+	node [align=left fontname=monospace fontsize=10 height=0.2 ranksep=0.1 shape=box style=filled]
+	2082190811888 [label="
+ (1, 1)" fillcolor=darkolivegreen1]
+	2082488134544 -> 2082190812208 [dir=none]
+	2082190812208 [label="mat1
+ (1, 50)" fillcolor=orange]
+	2082488134544 -> 2082190811728 [dir=none]
+	2082190811728 [label="mat2
+ (50, 1)" fillcolor=orange]
+	2082488134544 [label="AddmmBackward0
+--------------------------------
+alpha           :              1
+beta            :              1
+mat1            : [saved tensor]
+mat1_sym_sizes  :        (1, 50)
+mat1_sym_strides:        (50, 1)
+mat2            : [saved tensor]
+mat2_sym_sizes  :        (50, 1)
+mat2_sym_strides:        (1, 50)"]
+	2082488135360 -> 2082488134544
+	2081761748336 [label="fc.bias
+ (1)" fillcolor=lightblue]
+	2081761748336 -> 2082488135360
+	2082488135360 [label=AccumulateGrad]
+	2082488125280 -> 2082488134544
+	2082488125280 [label="SliceBackward0
+--------------------------
+dim           :          1
+end           : 4294967295
+self_sym_sizes:    (1, 50)
+start         :          0
+step          :          1"]
+	2082190972272 -> 2082488125280
+	2082190972272 [label="SelectBackward0
+---------------------------
+dim           :           1
+index         :  4294967295
+self_sym_sizes: (1, 10, 50)"]
+	2082190970544 -> 2082190972272
+	2082190970544 [label="SliceBackward0
+---------------------------
+dim           :           0
+end           :  4294967295
+self_sym_sizes: (1, 10, 50)
+start         :           0
+step          :           1"]
+	2082190979904 -> 2082190970544
+	2082190979904 -> 2082186148448 [dir=none]
+	2082186148448 [label="hx
+ (3, 1, 50)" fillcolor=orange]
+	2082190979904 -> 2081737483392 [dir=none]
+	2081737483392 [label="input
+ (1, 10, 7)" fillcolor=orange]
+	2082190979904 -> 2082190811408 [dir=none]
+	2082190811408 [label="result0
+ (1, 10, 50)" fillcolor=orange]
+	2082190979904 -> 2082190810688 [dir=none]
+	2082190810688 [label="result3
+ (0)" fillcolor=orange]
+	2082190979904 -> 2082190810928 [dir=none]
+	2082190810928 [label="result4
+ (39450)" fillcolor=orange]
+	2082190979904 -> 2081761167296 [dir=none]
+	2081761167296 [label="weight[0]
+ (150, 7)" fillcolor=orange]
+	2082190979904 -> 2081761746496 [dir=none]
+	2081761746496 [label="weight[1]
+ (150, 50)" fillcolor=orange]
+	2082190979904 -> 2081761745696 [dir=none]
+	2081761745696 [label="weight[2]
+ (150)" fillcolor=orange]
+	2082190979904 -> 2081761746656 [dir=none]
+	2081761746656 [label="weight[3]
+ (150)" fillcolor=orange]
+	2082190979904 -> 2081761745856 [dir=none]
+	2081761745856 [label="weight[4]
+ (150, 50)" fillcolor=orange]
+	2082190979904 -> 2081761744816 [dir=none]
+	2081761744816 [label="weight[5]
+ (150, 50)" fillcolor=orange]
+	2082190979904 -> 2081761744896 [dir=none]
+	2081761744896 [label="weight[6]
+ (150)" fillcolor=orange]
+	2082190979904 -> 2081761744976 [dir=none]
+	2081761744976 [label="weight[7]
+ (150)" fillcolor=orange]
+	2082190979904 -> 2081761742176 [dir=none]
+	2081761742176 [label="weight[8]
+ (150, 50)" fillcolor=orange]
+	2082190979904 -> 2081761742096 [dir=none]
+	2081761742096 [label="weight[9]
+ (150, 50)" fillcolor=orange]
+	2082190979904 -> 2081761746736 [dir=none]
+	2081761746736 [label="weight[10]
+ (150)" fillcolor=orange]
+	2082190979904 -> 2081761747936 [dir=none]
+	2081761747936 [label="weight[11]
+ (150)" fillcolor=orange]
+	2082190979904 [label="CudnnRnnBackward0
+-------------------------------
+batch_first   :            True
+batch_sizes   :              ()
+bidirectional :           False
+cx            :            None
+dropout       :             0.0
+dropout_state :            None
+hidden_size   :              50
+hx            :  [saved tensor]
+input         :  [saved tensor]
+mode          :               3
+num_layers    :               3
+proj_size     :               0
+result0       :  [saved tensor]
+result3       :  [saved tensor]
+result4       :  [saved tensor]
+train         :           False
+weight        : [saved tensors]
+weight_stride0:               4"]
+	2082190973760 -> 2082190979904
+	2081761167296 [label="gru.weight_ih_l0
+ (150, 7)" fillcolor=lightblue]
+	2081761167296 -> 2082190973760
+	2082190973760 [label=AccumulateGrad]
+	2082190978560 -> 2082190979904
+	2081761746496 [label="gru.weight_hh_l0
+ (150, 50)" fillcolor=lightblue]
+	2081761746496 -> 2082190978560
+	2082190978560 [label=AccumulateGrad]
+	2082190981440 -> 2082190979904
+	2081761745696 [label="gru.bias_ih_l0
+ (150)" fillcolor=lightblue]
+	2081761745696 -> 2082190981440
+	2082190981440 [label=AccumulateGrad]
+	2082190979664 -> 2082190979904
+	2081761746656 [label="gru.bias_hh_l0
+ (150)" fillcolor=lightblue]
+	2081761746656 -> 2082190979664
+	2082190979664 [label=AccumulateGrad]
+	2082190970928 -> 2082190979904
+	2081761745856 [label="gru.weight_ih_l1
+ (150, 50)" fillcolor=lightblue]
+	2081761745856 -> 2082190970928
+	2082190970928 [label=AccumulateGrad]
+	2082190980384 -> 2082190979904
+	2081761744816 [label="gru.weight_hh_l1
+ (150, 50)" fillcolor=lightblue]
+	2081761744816 -> 2082190980384
+	2082190980384 [label=AccumulateGrad]
+	2082190982016 -> 2082190979904
+	2081761744896 [label="gru.bias_ih_l1
+ (150)" fillcolor=lightblue]
+	2081761744896 -> 2082190982016
+	2082190982016 [label=AccumulateGrad]
+	2082190970736 -> 2082190979904
+	2081761744976 [label="gru.bias_hh_l1
+ (150)" fillcolor=lightblue]
+	2081761744976 -> 2082190970736
+	2082190970736 [label=AccumulateGrad]
+	2082190980048 -> 2082190979904
+	2081761742176 [label="gru.weight_ih_l2
+ (150, 50)" fillcolor=lightblue]
+	2081761742176 -> 2082190980048
+	2082190980048 [label=AccumulateGrad]
+	2082190968096 -> 2082190979904
+	2081761742096 [label="gru.weight_hh_l2
+ (150, 50)" fillcolor=lightblue]
+	2081761742096 -> 2082190968096
+	2082190968096 [label=AccumulateGrad]
+	2082190970400 -> 2082190979904
+	2081761746736 [label="gru.bias_ih_l2
+ (150)" fillcolor=lightblue]
+	2081761746736 -> 2082190970400
+	2082190970400 [label=AccumulateGrad]
+	2082190970496 -> 2082190979904
+	2081761747936 [label="gru.bias_hh_l2
+ (150)" fillcolor=lightblue]
+	2081761747936 -> 2082190970496
+	2082190970496 [label=AccumulateGrad]
+	2082488134352 -> 2082488134544
+	2082488134352 [label=TBackward0]
+	2082190980096 -> 2082488134352
+	2081761748656 [label="fc.weight
+ (1, 50)" fillcolor=lightblue]
+	2081761748656 -> 2082190980096
+	2082190980096 [label=AccumulateGrad]
+	2082488134544 -> 2082190811888
+}

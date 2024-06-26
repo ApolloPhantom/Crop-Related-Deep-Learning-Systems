@@ -1,0 +1,7 @@
+
+1. Recommendation for Crop
+ 
+ 1. KNN Model with Cosine.
+ 2. Random Forest Model
+ 3. Neural Network Model
+ 4. Content Based Filtering Model

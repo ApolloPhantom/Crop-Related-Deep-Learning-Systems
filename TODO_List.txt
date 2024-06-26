@@ -1,0 +1,46 @@
+
+Todo List for Frontend
+
+1. A Home Page with a Navbar with the following Nav Buttons:-
+   i> Login
+   ii> Register
+   iii> Crop Recommendation
+
+2. A Login Page with a Form with the following:-
+    i> Aadhar Number (input)
+    ii> Password (input)
+    iii> Forgot Password 
+    iv> Login Button
+
+3. A Registration Page with a Form with the following:-
+i> Aadhar Number (input)
+ii> Password (input)
+iii> Confirm Password (input)
+iv> Register Button
+
+4. Recommendation Page with a Form with the following:-
+i> State (dropdown menu with inputs:-
+['haryana' 'assam' 'telangana' 'maharashtra' 'chhattisgarh' 'kerala'
+ 'rajasthan' 'karnataka' 'odisha' 'uttarakhand' 'andhra pradesh'
+ 'jharkhand' 'arunachal pradesh' 'jammu and kashmir' 'tamil nadu'
+ 'madhya pradesh' 'himachal pradesh' 'mizoram' 'sikkim' 'nagaland'
+ 'chandigarh' 'tripura' 'andaman and nicobar islands' 'punjab'
+ 'puducherry' 'manipur' 'west bengal' 'uttar pradesh' 'bihar' 'gujarat'
+ 'meghalaya' 'goa' 'dadra and nagar haveli']
+)
+ii> Season (dropdown menu with inputs:-
+['kharif' 'rabi' 'summer' 'whole year']
+)
+iii> N (Nitrogen Contents in kh/ha) (float input)
+iv> P (Phosphorus Contents in kh/ha) (float input)
+v> K (Potassium Contents in kh/ha) (float input)
+vi> pH (float integer)
+vii> rainfall (in mm) (float input)
+viii> temperature (in Celsius) (float intput)
+ix> Area (in hectares) (float intput)
+x> Recommend Button
+xi> A space to show Recommended Value
+
+Additionally a Logout button  must be hidden in Navbar.
+Every Page must have the Navbar
+

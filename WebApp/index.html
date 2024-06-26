@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Collection</title>
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-5">Crop Yield Prediction</h1>
+        <h3 class="text-center mb-4">Please enter the data below</h3>
+        <form action="{{ url_for('predict') }}" method="post" class="custom-form">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="state" class="form-label">State:</label>
+                        <input type="text" name="state" id="state" class="form-control" placeholder="Enter State" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="district" class="form-label">District:</label>
+                        <input type="text" name="district" id="district" class="form-control" placeholder="Enter District" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="crop" class="form-label">Crop:</label>
+                        <input type="text" name="crop" id="crop" class="form-control" placeholder="Enter Crop" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="date" class="form-label">Date:</label>
+                        <input type="date" name="date" id="date" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="season" class="form-label">Season:</label>
+                        <select name="season" id="season" class="form-select" required>
+                            <option value="">Select Season</option>
+                            <option value="Whole year">Whole year</option>
+                            <option value="Kharif">Kharif</option>
+                            <option value="Rabi">Rabi</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="area" class="form-label">Area:</label>
+                        <input type="number" step="0.01" name="area" id="area" class="form-control" placeholder="Enter Area" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="area_units" class="form-label">Area Units:</label>
+                        <input type="text" name="area_units" id="area_units" class="form-control" placeholder="Hectare" value="Hectare" disabled>
+                    </div>
+                    <div class="mb-3">
+                        <label for="production" class="form-label">Production:</label>
+                        <input type="number" step="0.01" name="production" id="production" class="form-control" placeholder="Enter Production" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="production_units" class="form-label">Production Units:</label>
+                        <select name="production_units" id="production_units" class="form-select" required>
+                            <option value="">Select Production Units</option>
+                            <option value="Tonnes">Tonnes</option>
+                            <option value="Bales">Bales</option>
+                            <option value="Nuts">Nuts</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- <button type="submit" class="btn btn-primary" style="display:block; margin: 0 auto;">Predict</button> -->
+        </form>
+    </div>
+    <script src="./bootstrap.min.js"></script>
+</body>
+</html>
